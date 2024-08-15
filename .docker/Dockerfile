@@ -1,0 +1,14 @@
+FROM node:22.4-alpine
+
+WORKDIR /app
+
+COPY package*.json .
+
+RUN npm install npm
+RUN npm install @types/node@20.14.10 csv-parser@3.0.0 @octokit/rest@21.0.0
+RUN npm install axios@1.7.2 handlebars@4.7.8 dotenv@16.4.5
+
+COPY . .
+
+RUN apk update && apk add --no-cache git
+RUN apk add sudo
