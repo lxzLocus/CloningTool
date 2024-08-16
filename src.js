@@ -1,5 +1,5 @@
 /*********
- for bug dataset
+
  GitHubの  issue前後のリポジトリを取得する
  プルリクエストの前後を取得する
 
@@ -193,7 +193,7 @@ async function processRepository(repoUrl) {
                 console.log(`Changed programming files: ${programmingFiles.join(', ')}`);
 
                 const repoDir = path.join(saveDir, repo);
-                const sanitizedIssueTitle = sanitizeDirectoryName(issue.title); // ここでタイトルをサニタイズ
+                const sanitizedIssueTitle = sanitizeDirectoryName(issue.title);
                 const issueDir = path.join(repoDir, 'issue', sanitizedIssueTitle);
                 await createDirectory(repoDir);
                 await createDirectory(path.join(repoDir, 'issue'));
