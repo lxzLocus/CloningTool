@@ -34,3 +34,8 @@ Repository Clone Tool
                └── <Repository Name 3>
 ```
 
+## もしかして
+` sudo git config --system core.longpaths true`
+  or
+  .git/config [core] longpaths = true 追加
+
