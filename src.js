@@ -15,7 +15,7 @@ const githubToken = process.env.GITHUB_TOKEN;
 
 
 /*****settings*****/
-const csvFilePath = 'src.js';
+const csvFilePath = 'cloneTarget.csv';
 const saveDir = 'cloned';
 
 //issue & pull request 取得拡張子定義

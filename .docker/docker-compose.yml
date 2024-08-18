@@ -1,9 +1,9 @@
 services:
-  node:
+  clone:
     build:
       context: ./
       dockerfile: Dockerfile
-    container_name: node
+    container_name: clone
     tty: true
     volumes:
       - /app/node_modules 
