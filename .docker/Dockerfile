@@ -12,3 +12,4 @@ COPY . .
 
 RUN apk update && apk add --no-cache git
 RUN apk add sudo
+RUN sudo git config --system core.longpaths true
