@@ -1,12 +1,12 @@
 services:
   clone:
     build:
-      context: ./
+      context: . 
       dockerfile: Dockerfile
     container_name: clone
     tty: true
     volumes:
-      - /app/node_modules 
-      - type: bind
-        source: ../
+      - /app/node_modules
+      - type: bind 
+        source: ./ 
         target: /app

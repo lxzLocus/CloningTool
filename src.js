@@ -15,8 +15,8 @@ const githubToken = process.env.GITHUB_TOKEN;
 
 
 /*****settings*****/
-const csvFilePath = 'cloneTarget.csv';
-const saveDir = 'cloned';
+const csvFilePath = '/app/cloneTarget.csv';
+const saveDir = '/app/cloned/';
 
 //issue & pull request 取得拡張子定義
 const programmingFileExtensions = [
@@ -270,9 +270,14 @@ function run() {
         })
         .on('end', async () => {
             console.log('CSV file successfully processed');
+
+            let repoCount = 1;
             for (const repoUrl of repoUrls) {
+                console.log(`Processing: ${repoCount} / ${repoUrls.length}`)
                 await processRepository(repoUrl);
+                repoCount++;
             }
+            console.log('All repositories processed.');
         });
 }
 
